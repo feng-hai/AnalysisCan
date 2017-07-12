@@ -50,8 +50,8 @@ public class SaveDataRedis extends Thread {
 				// +message.getKey(), message.getRedisValues());
 
 				logger.info("K" + message.getKey() +"-"+ publicStaticMap.getMessageQueue().size()+"-" + publicStaticMap.getRedisValuesQueue().size() + "-"
-						+ message.getRedisValues().get("lastLocateTime") + ":"
-						+ message.getRedisValues().get("lastCanTime")+":"+ message.getRedisValues().get("lastCanTime"));
+						+ message.getRedisValues().get("lastLocateTime") );
+					
 
 				long t = System.currentTimeMillis() - s;
 				if (t >= 1000) {

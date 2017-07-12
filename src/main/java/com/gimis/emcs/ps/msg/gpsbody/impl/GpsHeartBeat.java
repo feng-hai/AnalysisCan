@@ -1,14 +1,24 @@
+
 package com.gimis.emcs.ps.msg.gpsbody.impl;
 
 import java.io.Serializable;
 import java.util.Date;
 
+import com.gimis.emcs.ps.msg.MoResponseMessageBody;
 import com.gimis.emcs.ps.msg.gpsbody.GpsBasicInfo;
-import com.gimis.emcs.ps.msg.util.MessageTools;
 
-public class GpsHeartBeat implements GpsBasicInfo,Serializable
+
+/**
+ * 心跳数据实体信息
+* [一句话功能简述]<p> 
+* [功能详细描述]<p> 
+* @author Zhongjm 
+* @version 1.0, 2015年4月10日 
+* @see 
+* @since V1.0
+ */
+public class GpsHeartBeat implements GpsBasicInfo, MoResponseMessageBody, Serializable
 {
-
     /**
      * 
      */
@@ -109,7 +119,7 @@ public class GpsHeartBeat implements GpsBasicInfo,Serializable
     {
         if (null != longitude)
         {
-            return MessageTools.getSixDoubleValue((double) longitude / 1000000);
+            return (double) longitude / 1000000;
         }
         else
         {
@@ -127,7 +137,7 @@ public class GpsHeartBeat implements GpsBasicInfo,Serializable
     {
         if (null != latitude)
         {
-            return MessageTools.getSixDoubleValue((double) latitude / 1000000);
+            return (double) latitude / 1000000;
         }
         else
         {
@@ -142,7 +152,7 @@ public class GpsHeartBeat implements GpsBasicInfo,Serializable
 
     public Double getSpeed()
     {
-        return MessageTools.getShortValue(speed) * 0.5;
+        return (speed) * 0.5;
     }
 
     public void setSpeed(Short speed)

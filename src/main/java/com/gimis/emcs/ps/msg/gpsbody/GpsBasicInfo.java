@@ -1,9 +1,24 @@
+/**
+ * 
+ */
 package com.gimis.emcs.ps.msg.gpsbody;
 
 import java.util.Date;
 
+import com.gimis.emcs.ps.msg.gpsbody.GpsBody;
+
+/**
+ * [一句话功能简述]<p>
+ * GPS心跳实现接口
+ * [功能详细描述]<p>
+ * @author zjm
+ * @version 1.0, 2012-2-28
+ * @see
+ * @since gms-v100
+ */
 public interface GpsBasicInfo extends GpsBody
 {
+
     public Byte getUploadType();
 
     public void setUploadType(Byte uploadType);

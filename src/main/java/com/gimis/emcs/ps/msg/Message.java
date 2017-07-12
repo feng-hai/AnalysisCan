@@ -1,5 +1,6 @@
 
 package com.gimis.emcs.ps.msg;
+
 import com.gimis.emcs.ps.msg.append.Append;
 import com.gimis.emcs.ps.msg.end.End;
 import com.gimis.emcs.ps.msg.gpsbody.GpsBody;

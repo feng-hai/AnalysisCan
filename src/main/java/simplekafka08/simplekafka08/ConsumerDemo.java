@@ -119,22 +119,22 @@ public class ConsumerDemo {
 		Timer timerOnLine = new Timer();
 		timerOnLine.schedule(new MyTaskOnLine(), new Date(), 120000);
 
-		for (int i = 0; i < 6; i++) {
-			SendDataTokafka sendData = new SendDataTokafka();
-			sendData.setDaemon(true);
-			sendData.start();
-		}
-		 for (int i = 0; i < 6; i++) {
+//		for (int i = 0; i < 6; i++) {
+//			SendDataTokafka sendData = new SendDataTokafka();
+//			sendData.setDaemon(true);
+//			sendData.start();
+//		}
+		// for (int i = 0; i < 6; i++) {
 				SaveDataRedis sendData = new SaveDataRedis();
 				sendData.setDaemon(true);
 				sendData.start();
-		 }
+		 //}
 //		SaveDataRedis sendData = new SaveDataRedis();
 //		sendData.setDaemon(true);
 //		sendData.start();
-		ConsumerDemo mcu = new ConsumerDemo(prop.get("kafka.server"), prop.get("kafka.groupId"),
-				prop.get("kafka.topicName.canData"));
-		mcu.run(threads);
+//		ConsumerDemo mcu = new ConsumerDemo(prop.get("kafka.server"), prop.get("kafka.groupId"),
+//				prop.get("kafka.topicName.canData"));
+//		mcu.run(threads);
 
 		 ConsumerDemo gps = new ConsumerDemo(prop.get("kafka.server"),
 		 prop.get("kafka.groupId"),
